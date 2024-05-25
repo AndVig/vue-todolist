@@ -48,18 +48,18 @@ createApp({
             //     this.tasks[indexRicevuto].done=true;
             // }
         },
-        findTask(){
-            this.tasks=this.tasks.filter((element)=>{
-                return element.text.includes(this.searchTask);
-            })
-        },
+        // findTask(){
+        //     this.tasks=this.tasks.filter((element)=>{
+        //         return element.text.includes(this.searchTask);
+        //     })
+        // },
         listTask(){
             if(this.searchTask){
                 return this.tasks.filter((element)=>{
                     return element.text.includes(this.searchTask);
                 })
             }else{
-
+                return this.tasks;
             }
         },
     }

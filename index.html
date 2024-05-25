@@ -15,7 +15,7 @@
             <h2>Cerca</h2>
             <label for="search-task">Cerca un task</label>
             <input type="text" id="search-task" v-model="searchTask">
-            <button @click="findTask">Cerca</button>
+         
         </section>
 
         <section class="py-5">
@@ -25,7 +25,7 @@
         </section>
         <hr>
         <ul>
-            <li v-for="(task,index) in tasks" :key="`task-${index}`" >
+            <li v-for="(task,index) in listTask()" :key="`task-${index}`" >
                <span :class="{done:task.done}" @click="toggleTask(index)">{{index}} - {{task.text}}</span> 
                <button @click="removeTask(index)">x</button>
             </li>
